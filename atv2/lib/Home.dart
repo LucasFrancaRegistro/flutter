@@ -62,9 +62,8 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
         body: Center(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 10.0), // um retângulo contendo widget de entrada
+          const SizedBox(height: 10.0), // um retângulo contendo widget de entrada
           SizedBox(
               // label para primeiro número
               width: 300,
@@ -78,12 +77,12 @@ class HomePageState extends State<HomePage> {
                     //borda ao redor da entrada
                     borderSide: BorderSide(color: borderColor), //cor da borda
                   ), //quando receber o foco, altera cor da borda
-                  focusedBorder: OutlineInputBorder(
+                  focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.blue),
                   ),
                 ),
               )),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           !envio
               ? SizedBox(
                   width: 300,
@@ -92,11 +91,11 @@ class HomePageState extends State<HomePage> {
                     children: [
                       ElevatedButton(
                         onPressed: _enviar, // executa _enviar
-                        child: Text('Enviar'),
+                        child: const Text('Enviar'),
                       ),
                       ElevatedButton(
                         onPressed: _cancelar, // executa _cancelar
-                        child: Text('Cancelar'),
+                        child: const Text('Cancelar'),
                       ),
                     ],
                   ))
